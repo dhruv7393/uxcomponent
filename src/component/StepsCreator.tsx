@@ -1,4 +1,3 @@
-import React from "react";
 import { Steps } from "antd";
 
 interface itemsObject {
@@ -13,7 +12,9 @@ export interface StepsCreatorProps {
   onChange?: (current: number) => void;
 }
 
-const defaultOnChange = (current: number) => {};
+const defaultOnChange = (current: number) => {
+  console.log(current);
+};
 
 const StepsCreator = ({
   direction = "vertical",
