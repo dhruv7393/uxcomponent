@@ -1,10 +1,9 @@
 //ButtonWithImageDoc
 import * as icons from "@ant-design/icons";
 import ButtonWithImage from "../component/ButtonWithImage";
-import TableForDescription from "../utilities/TableForDescription";
 
 const ButtonWithImageDoc = () => {
-  const params = [
+  /*const params = [
     {
       key: "key",
       description: "Name of button",
@@ -28,7 +27,7 @@ const ButtonWithImageDoc = () => {
       required: false,
       values: ["true", "false"],
     },
-  ];
+  ];*/
 
   const handleClick = () => {
     console.log("Button is clicked");
@@ -36,7 +35,7 @@ const ButtonWithImageDoc = () => {
 
   return (
     <>
-      <TableForDescription parameters={params} />
+      {/*<TableForDescription parameters={params} />*/}
       <ButtonWithImage
         key="test-button"
         onClick={handleClick}
