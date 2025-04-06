@@ -22,7 +22,7 @@ const CalendarCreator = ({
   };
 
   const wrapperStyle: React.CSSProperties = {
-    width: "100%",
+    maxWidth: "100%",
     border: `1px solid ${token.colorBorderSecondary}`,
     borderRadius: token.borderRadiusLG,
   };
