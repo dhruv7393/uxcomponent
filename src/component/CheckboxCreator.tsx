@@ -1,9 +1,10 @@
 import { Checkbox } from "antd";
+import { useState } from "react";
 
 interface CheckboxCreatorProps {
   items: string[];
   checked: string[];
-  onChange: (item: string) => void;
+  onChange: (items: string[]) => void;
 }
 
 const CheckboxCreator = ({
@@ -11,21 +12,30 @@ const CheckboxCreator = ({
   checked,
   onChange,
 }: CheckboxCreatorProps) => {
+  const [currentChecked, setCurrentChecked] = useState<string[]>(checked);
   const sortArray = (allItems: string[], checkedItems: string[]) => {
     const notInArr2 = allItems.filter((item) => !checkedItems.includes(item));
     const inArr2 = allItems.filter((item) => checkedItems.includes(item));
 
     return notInArr2.concat(inArr2);
   };
+
+  const handleChange = (item: string) => {
+    const updatedCheckedValues = currentChecked.includes(item)
+      ? [...currentChecked.filter((ci) => ci !== item)]
+      : [...currentChecked, item];
+    setCurrentChecked(updatedCheckedValues);
+    onChange(updatedCheckedValues);
+  };
   return (
     <>
-      {sortArray(items, checked).map((item) => {
-        const isSelected = checked.includes(item);
+      {sortArray(items, currentChecked).map((item) => {
+        const isSelected = currentChecked.includes(item);
         return (
           <p key={item}>
             <Checkbox
               checked={isSelected}
-              onClick={() => onChange(item)}
+              onClick={() => handleChange(item)}
               style={{ textDecoration: isSelected ? "line-through" : "none" }}
             >
               {item}
