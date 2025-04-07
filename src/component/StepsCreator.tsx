@@ -10,12 +10,11 @@ export interface StepsCreatorProps {
   direction?: "vertical" | "horizontal";
   items: itemsObject[];
   current?: number;
-  onChange?: (current: number) => boolean;
+  onChange?: (current: number) => void;
 }
 
 const defaultOnChange = (current: number) => {
   console.log(current);
-  return true;
 };
 
 const StepsCreator = ({
@@ -25,12 +24,9 @@ const StepsCreator = ({
   onChange = defaultOnChange,
 }: StepsCreatorProps) => {
   const [currentValue, setCurrentValue] = useState(current);
-  const handleUpdate = async (current: number) => {
-    console.log("In handleUpdate");
-    if (await onChange(current)) {
-      console.log("In steps success");
-      setCurrentValue(current);
-    }
+  const handleUpdate = (current: number) => {
+    onChange(current);
+    setCurrentValue(current);
   };
   return (
     <Steps
