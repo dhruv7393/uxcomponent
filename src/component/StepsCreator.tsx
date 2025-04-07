@@ -27,7 +27,8 @@ const StepsCreator = ({
   const [currentValue, setCurrentValue] = useState(current);
   const handleUpdate = (current: number) => {
     if (onChange(current)) {
-      setCurrentValue(() => current);
+      console.log("In steps success");
+      setCurrentValue(current);
     }
   };
   return (
