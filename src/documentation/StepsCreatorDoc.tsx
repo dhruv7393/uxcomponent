@@ -18,6 +18,7 @@ const StepsCreatorDoc = () => {
   ];
   const onChange = (current: number) => {
     console.log("Hello", current);
+    return true;
   };
   return <StepsCreator items={items} current={3} onChange={onChange} />;
 };
