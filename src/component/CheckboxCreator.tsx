@@ -22,7 +22,7 @@ const CheckboxCreator = ({
       {sortArray(items, checked).map((item) => {
         const isSelected = checked.includes(item);
         return (
-          <p>
+          <p key={item}>
             <Checkbox
               checked={isSelected}
               onClick={() => onChange(item)}

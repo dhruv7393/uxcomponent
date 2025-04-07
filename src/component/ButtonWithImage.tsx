@@ -25,6 +25,7 @@ const ButtonWithImage = ({
         disabled={disabled}
         type={type}
         shape="circle"
+        style={{ marginLeft: "5px", marginRight: "5px" }}
       >
         {ImageDisplayed}
       </Button>
