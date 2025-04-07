@@ -25,8 +25,9 @@ const StepsCreator = ({
   onChange = defaultOnChange,
 }: StepsCreatorProps) => {
   const [currentValue, setCurrentValue] = useState(current);
-  const handleUpdate = (current: number) => {
-    if (onChange(current)) {
+  const handleUpdate = async (current: number) => {
+    console.log("In handleUpdate");
+    if (await onChange(current)) {
       console.log("In steps success");
       setCurrentValue(current);
     }
