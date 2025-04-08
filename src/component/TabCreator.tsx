@@ -3,7 +3,7 @@ import { Tabs } from "antd";
 
 interface itemsObject {
   key: string;
-  label: string;
+  label: ReactNode;
   children: ReactNode;
 }
 
