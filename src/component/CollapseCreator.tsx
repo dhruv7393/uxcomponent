@@ -6,7 +6,7 @@ export interface CollapseCreatorPropsObj {
   key: string;
   label: string;
   children: ReactNode;
-  className: "level1" | "level2" | "level3" | "level4";
+  className: string;
   extra?: ReactNode;
 }
 
