@@ -2,6 +2,7 @@ import CarouselCreator from "../component/CarouselCreator";
 import ButtonGroupsCreatorDoc from "./ButtonGroupsCreatorDoc";
 import CalendarCreatorDoc from "./CalendarCreatorDoc";
 import CheckboxCreatorDoc from "./CheckboxCreatorDoc";
+import ModalCreatorDoc from "./ModalCreatorDoc";
 import RatingCreatorDoc from "./RatingCreatorDoc";
 import SelectCreatorDoc from "./SelectCreatorDoc";
 import StepsCreatorDoc from "./StepsCreatorDoc";
@@ -25,6 +26,8 @@ const CarouselCreatorDoc = () => {
       <br />
       Ratings:
       <RatingCreatorDoc />
+      Modal :
+      <ModalCreatorDoc />
     </>,
   ];
   return <CarouselCreator elements={elements} onChange={onChange} />;
