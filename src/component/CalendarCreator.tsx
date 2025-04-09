@@ -17,7 +17,10 @@ const CalendarCreator = ({
 
   const onSelectChange = (value: Dayjs, selectInfo: SelectInfo) => {
     if (selectInfo.source === "date") {
-      handleDateChange(value.format("YYYY-MM-DD").toString());
+      const actualdate = new Date(
+        new Date(value.format("YYYY-MM-DD").toString()).getTime() + 86400000
+      ).toLocaleDateString();
+      handleDateChange(actualdate);
     }
   };
 
