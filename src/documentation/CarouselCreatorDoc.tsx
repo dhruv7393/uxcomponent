@@ -1,3 +1,4 @@
+import AlertCreatorRef from "../component/AlertCreatorRef";
 import CarouselCreator from "../component/CarouselCreator";
 import ButtonGroupsCreatorDoc from "./ButtonGroupsCreatorDoc";
 import CalendarCreatorDoc from "./CalendarCreatorDoc";
@@ -28,6 +29,9 @@ const CarouselCreatorDoc = () => {
       <RatingCreatorDoc />
       Modal :
       <ModalCreatorDoc />
+      <br />
+      Notification:
+      <AlertCreatorRef />
     </>,
   ];
   return <CarouselCreator elements={elements} onChange={onChange} />;
