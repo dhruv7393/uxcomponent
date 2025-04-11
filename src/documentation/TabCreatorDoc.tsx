@@ -1,5 +1,6 @@
 import TabCreator, { TabCreatorProps } from "../component/TabCreator";
 import CollapseCreatorDoc from "./CollapseCreatorDoc";
+import GaugeCreatorDoc from "./GaugeCreatorDoc";
 
 const TabCreatorDoc = () => {
   const onChange = (key: string) => {
@@ -21,6 +22,11 @@ const TabCreatorDoc = () => {
       key: "3",
       label: "Done",
       children: "Content of Tab Pane 3",
+    },
+    {
+      key: "4",
+      label: "Track",
+      children: <GaugeCreatorDoc />,
     },
   ];
   return (

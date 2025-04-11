@@ -4,6 +4,7 @@ export { default as CalendarCreator } from "./src/component/CalendarCreator";
 export { default as CarouselCreator } from "./src/component/CarouselCreator";
 export { default as CheckboxCreator } from "./src/component/CheckboxCreator";
 export { default as CollapseCreator } from "./src/component/CollapseCreator";
+export { default as GaugeCreator } from "./src/component/GaugeCreator";
 export { default as ModalCreator } from "./src/component/ModalCreator";
 export { default as RatingCreator } from "./src/component/RatingCreator";
 export { default as SelectCreator } from "./src/component/SelectCreator";
